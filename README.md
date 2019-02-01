@@ -13,6 +13,8 @@ Further the following restrictions hold:
 - A large room reservation will be cancel the day before, if it does not get confirmed by another user
 - A full list of all rules is provided on the [online service website](https://www.ub.uni-siegen.de/reservierung/interim/) (Click on "Regeln")
 
+A nearly [identical system](https://diglib.bis.uni-oldenburg.de/gruppenraeume/) is used by the [Carl von Ossietzky University of Oldenburg](https://uol.de/). A comment in the [provided HTML file](https://www.ub.uni-siegen.de/reservierung/interim/index.php) suggests that the developer of this system is [Lars Heuer](https://uol.de/?id=361), who is indeed a employee of the digital library department in the University of Oldenburg. This system is therefore likely to have the same issues, since the JavaScript main file seems to be identical.
+
 ## Issues
 The main issue with this service is that most of the validation is done via client-side JavaScript. This leads to the problem that the server which is used to store and provide the booking data, will accept many commands to manipulate and access data, altough the user is not authorized to do that.  
 By looking at the [main JavaScript file](https://www.ub.uni-siegen.de/reservierung/interim/js/functions.js) you can easily identify the function **bookIt** which books a room. The following code listing shows the function **bookIt**
