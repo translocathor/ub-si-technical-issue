@@ -68,3 +68,13 @@ To actually book a room, the user needs to call *ajax_php/set_data.php* and send
 ````
 https://www.ub.uni-siegen.de/reservierung/interim/ajax_php/set_data.php?action=book_room&value=20170213%2C1400%2C1800%2C1%2CR%2CTEST
 ````
+#### Problems
+Booking a room using this method has some severe problems
+1. You do not need to be logged in to book a room
+2. You can exceed the upper limit of 4h for a single booking
+3. You can choose an arbitrary name for the second user
+4. By Using the reservation type 'S' (which is intented to be used for single rooms) you can book a group room, without confirming it
+Since I did not want to compromise the system I did not test the following cases
+- Booking a room on a date which is not shown in the reservation plan
+- Overbooking a room (I guess it would work)
+- Is a group room booking cancelled, if it was booked with reservation type 'S' and was not confirmed by another user
