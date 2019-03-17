@@ -54,7 +54,7 @@ function bookIt(pre) {
     });
 }
 ```
-The code above shows that the actual data, which ich send to the server, is created by concatenating the date, start and end time, the room number, the room type and the ID of the seconds user (required for group room bookings). By simply analysing the code or using a modern browser's integrated web development tool, you can look at the full GET request which is sent to the server. For demonstration purposes the following section will provide an enumeration of actions that can be performed.
+The code above shows that the actual data, which is send to the server, is created by concatenating the date, start and end time, the room number, the room type and the ID of the seconds user (required for group room bookings). By simply analysing the code or using a modern browser's integrated web development tool, you can look at the full GET request which is sent to the server. For demonstration purposes the following section will provide an enumeration of actions that can be performed.
 ### Book a room
 To book a room the file *ajax_php/set_data.php* is used with the following parameters:
 - `action=book_room`
@@ -76,7 +76,7 @@ Booking a room using this method has some severe problems
 1. You do not need to be logged in to book a room
 2. You can exceed the upper limit of 4h for a single booking
 3. You can choose an arbitrary name for the second user
-4. By Using the reservation type 'S' (which is intented to be used for single rooms) you can book a group room, without confirming it
+4. By using the reservation type 'S' (which is intented to be used for single rooms) you can book a group room, without confirming it
 
 Since I do not want to compromise the system I did not test the following cases
 - Booking a room on a date or time which is not shown in the reservation plan
